@@ -6807,7 +6807,7 @@ if ("development" !== "production") {
       }
 
       var eventName = 'on' + eventNameSuffix;
-      var isSupported = eventName in document;
+      var isSupported = (eventName in document);
 
       if (!isSupported) {
         var element = document.createElement('div');
@@ -28285,17 +28285,179 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"script.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"assests/search.svg":[function(require,module,exports) {
+module.exports = "/search.e2288861.svg";
+},{}],"assests/input.svg":[function(require,module,exports) {
+module.exports = "/input.c42945c5.svg";
+},{}],"assests/label.svg":[function(require,module,exports) {
+module.exports = "/label.7f602166.svg";
+},{}],"assests/list.svg":[function(require,module,exports) {
+module.exports = "/list.8fbd4aab.svg";
+},{}],"assests/lock.svg":[function(require,module,exports) {
+module.exports = "/lock.8091c4fa.svg";
+},{}],"assests/phone.svg":[function(require,module,exports) {
+module.exports = "/phone.36b8b7c4.svg";
+},{}],"assests/settings.svg":[function(require,module,exports) {
+module.exports = "/settings.0eccf0a2.svg";
+},{}],"assests/login.svg":[function(require,module,exports) {
+module.exports = "/login.3c26033f.svg";
+},{}],"icons.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _search = _interopRequireDefault(require("./assests/search.svg"));
+
+var _input = _interopRequireDefault(require("./assests/input.svg"));
+
+var _label = _interopRequireDefault(require("./assests/label.svg"));
+
+var _list = _interopRequireDefault(require("./assests/list.svg"));
+
+var _lock = _interopRequireDefault(require("./assests/lock.svg"));
+
+var _phone = _interopRequireDefault(require("./assests/phone.svg"));
+
+var _settings = _interopRequireDefault(require("./assests/settings.svg"));
+
+var _login = _interopRequireDefault(require("./assests/login.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Icon = function Icon(props) {
+  var icon;
+  var style = props.align = "right" ? "icon--right" : null;
+
+  switch (props.name) {
+    case 'search':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _search.default,
+        className: style
+      });
+      break;
+
+    case 'input':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _input.default,
+        className: style
+      });
+      break;
+
+    case 'label':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _label.default,
+        className: style
+      });
+      break;
+
+    case 'list':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _list.default,
+        className: style
+      });
+      break;
+
+    case 'lock':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _lock.default,
+        className: style
+      });
+      break;
+
+    case 'phone':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _phone.default,
+        className: style
+      });
+      break;
+
+    case 'setting':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _settings.default,
+        className: style
+      });
+      break;
+
+    case 'login':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _login.default,
+        className: style
+      });
+      break;
+  }
+};
+
+var _default = Icon;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./assests/search.svg":"assests/search.svg","./assests/input.svg":"assests/input.svg","./assests/label.svg":"assests/label.svg","./assests/list.svg":"assests/list.svg","./assests/lock.svg":"assests/lock.svg","./assests/phone.svg":"assests/phone.svg","./assests/settings.svg":"assests/settings.svg","./assests/login.svg":"assests/login.svg"}],"InputComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _icons = _interopRequireDefault(require("./icons"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function InputComponent(props) {
+  var label = props.label || props.children;
+  var classes = props.value ? "input input--".concat(props.value) : "input";
+
+  if (props.disabled) {
+    classes = "".concat(classes, " input--di");
+  }
+
+  return /*#__PURE__*/_react.default.createElement("input", {
+    type: "text"
+  });
+}
+
+var _default = InputComponent;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./icons":"icons.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _InputComponent = _interopRequireDefault(require("./InputComponent"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function App() {
+  return /*#__PURE__*/_react.default.createElement(_InputComponent.default, null);
+}
+
+var _default = App;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./InputComponent":"InputComponent.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _App = _interopRequireDefault(require("./App"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement("h1", null, "Hello Onja"), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null, "Hello Onja"), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28323,7 +28485,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65015" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59289" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28499,5 +28661,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
 //# sourceMappingURL=/script.75da7f30.js.map
