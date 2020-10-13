@@ -28390,6 +28390,8 @@ var Icon = function Icon(props) {
       });
       break;
   }
+
+  return Icon;
 };
 
 var _default = Icon;
@@ -28410,15 +28412,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function InputComponent(props) {
   var label = props.label || props.children;
+  var helpertext = props.helpertext && 'true';
   var classes = props.value ? "input input--".concat(props.value) : "input";
 
-  if (props.disabled) {
-    classes = "".concat(classes, " input--di");
+  if (props.error) {
+    classes = "".concat(classes, " input--error");
   }
 
-  return /*#__PURE__*/_react.default.createElement("input", {
-    type: "text"
-  });
+  if (props.size) {
+    classes = "".concat(classes, " input--").concat(props.size);
+  }
+
+  if (props.fullWidth) {
+    classes = "".concat(classes, " input--fullWidth");
+  }
+
+  if (props.row) {
+    classes = "".concat(classes, " input--row");
+  }
+
+  return /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, label), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    className: classes,
+    placeholder: "placeholder",
+    disabled: props.disabled
+  }), /*#__PURE__*/_react.default.createElement("span", {
+    className: helpertext
+  }));
 }
 
 var _default = InputComponent;
@@ -28440,7 +28460,57 @@ var _InputComponent = _interopRequireDefault(require("./InputComponent"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_InputComponent.default, null);
+  return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input error />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    error: true
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    className: "label"
+  }, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input disabled />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    disabled: true
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label")), /*#__PURE__*/_react.default.createElement("span", {
+    helpertext: "true"
+  }, "Some intersting text")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" error />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    error: true
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    className: "label"
+  }, "Label")), /*#__PURE__*/_react.default.createElement("span", {
+    helpertext: "true"
+  }, "Some intersting text"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input value=\"text\"/>"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    value: "Text"
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input size=\"sm\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    size: "sm"
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input size=\"md\"/>"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    size: "md"
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))));
 }
 
 var _default = App;
@@ -28485,7 +28555,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59289" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61720" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

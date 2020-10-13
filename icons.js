@@ -38,6 +38,7 @@ const Icon = props => {
       icon = <img src={LoginIcon} className={style} />;
       break;
   }
+  return Icon;
 }
 
 export default Icon;
