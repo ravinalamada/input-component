@@ -12,7 +12,12 @@ const Icon = props => {
   let icon;
   let style = props.align === "right" ? "icon--right" : null;
 
-  switch(props.name) {
+  if (props.name == "phone") {
+    icon = <img src="./assets/phone.svg" className={style} />;
+    console.log(icon)
+  }
+
+  switch (props.name) {
     case 'search':
       icon = <img src={SearchIcon} className={style} />;
       break;
@@ -37,8 +42,11 @@ const Icon = props => {
     case 'login':
       icon = <img src={LoginIcon} className={style} />;
       break;
+    default:
+      <span></span>
+      break;
   }
-  return Icon;
+  return icon;
 }
 
 export default Icon;

@@ -58,10 +58,6 @@ fieldset {
   border: 1px solid #E0E0E0;
 }
 
-.true {
-  color: #828282;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -96,10 +92,32 @@ fieldset {
   flex-direction: column;
 }
 
-.textarea .inputContainer {
+.textarea input {
   display: flex;
   flex-direction: row;
   margin-left: 2px;
   margin-right: 2px;
   min-height: 200px;
+}
+
+.phone img {
+  position: relative;
+  top: 40px;
+  left: -122px;
+}
+
+.phone input {
+  padding-inline-start: 45px;
+  padding-inline-end: 76px;
+}
+
+.phone fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+.lock img {
+  position: relative;
+  top: 36px;
+  left: 122px;
 }

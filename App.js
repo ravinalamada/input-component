@@ -47,13 +47,13 @@ function App() {
         </InputComponent>
       </div>
       <div className="container">
-        <div className="wrapper">
+        <div className="wrapper phone">
           <span>{`<input />`}</span>
           <InputComponent startIcon="phone">
             <label>Label</label>
           </InputComponent>
         </div>
-        <div className="wrapper">
+        <div className="wrapper lock">
           <span>{`<input />`}</span>
           <InputComponent endIcon="lock">
             <label>Label</label>

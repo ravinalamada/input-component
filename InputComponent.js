@@ -22,14 +22,35 @@ function InputComponent(props) {
           <fieldset>
             <label>{label}</label>
             <div className="inputContainer">
-              <i>{`${props.startIcon ? <Icon name={props.startIcon} /> : ''}`}</i>
-              <i>{`${props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}`}</i>
+              {props.startIcon
+              ?
+                <fieldset>
+                  <Icon name={props.startIcon} />
+                  <input type="text"
+                    className={classes}
+                    placeholder="placeholder"
+                    disabled={props.disabled}
+                    defaultValue={props.value}
+                  />
+                </fieldset>
+               :
+               props.endIcon ?
+               <fieldset>
+                <Icon name={props.endIcon} align="right" />
+                <input type="text"
+                  className={classes}
+                  placeholder="placeholder"
+                  disabled={props.disabled}
+                  defaultValue={props.value}
+                />
+               </fieldset>
+              :
               <input type="text"
                     className={classes}
                     placeholder="placeholder"
                     disabled={props.disabled}
                     defaultValue={props.value}
-              />
+              />}
             {/* <helperText></helperText> */}
             </div>
           </fieldset>
