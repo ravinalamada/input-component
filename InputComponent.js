@@ -22,8 +22,18 @@ function InputComponent(props) {
   return (
           <fieldset>
             <label>{label}</label>
-            <input type="text" className={classes} placeholder="placeholder" disabled={props.disabled} ></input>
-            <span className={helpertext}></span>
+            <div className="inputContainer">
+              <i>${props.startIcon ? <Icon name={props.startIcon} /> : ''}</i>
+              <i>${props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
+              </i>
+              <input type="text"
+                    className={classes}
+                    placeholder="placeholder"
+                    disabled={props.disabled}
+                    defaultValue={props.value}
+              />
+            {/* <helperText></helperText> */}
+            </div>
           </fieldset>
 
   )

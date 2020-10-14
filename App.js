@@ -41,7 +41,7 @@ function App() {
         </div>
       </div>
       <div className="wrapper">
-        <span>{`<input value="text"/>`}</span>
+        <span>{`<input value="Text" />`}</span>
         <InputComponent value="Text">
           <label>Label</label>
         </InputComponent>
@@ -49,16 +49,22 @@ function App() {
       <div className="container">
         <div className="wrapper">
           <span>{`<input />`}</span>
-          <InputComponent >
+          <InputComponent startIcon="phone.svg">
             <label>Label</label>
           </InputComponent>
         </div>
         <div className="wrapper">
           <span>{`<input />`}</span>
-          <InputComponent >
+          <InputComponent endIcon="lock">
             <label>Label</label>
           </InputComponent>
         </div>
+      </div>
+      <div className="wrapper text">
+        <span>{`<input fullwidth/>`}</span>
+        <InputComponent value="Text">
+          <label>Label</label>
+        </InputComponent>
       </div>
       <div className="container">
         <div className="wrapper">
@@ -73,12 +79,6 @@ function App() {
             <label>Label</label>
           </InputComponent>
         </div>
-      </div>
-      <div className="wrapper">
-        <span>{`<input />`}</span>
-        <InputComponent >
-          <label>Label</label>
-        </InputComponent>
       </div>
       <div className="wrapper">
         <span>{`<input />`}</span>
