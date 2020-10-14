@@ -28331,7 +28331,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Icon = function Icon(props) {
   var icon;
-  var style = props.align == "right" ? "icon--right" : null;
+  var style = props.align === "right" ? "icon--right" : null;
 
   switch (props.name) {
     case 'search':
@@ -28433,12 +28433,12 @@ function InputComponent(props) {
 
   return /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, label), /*#__PURE__*/_react.default.createElement("div", {
     className: "inputContainer"
-  }, /*#__PURE__*/_react.default.createElement("i", null, "$", props.startIcon ? /*#__PURE__*/_react.default.createElement(_icons.default, {
+  }, /*#__PURE__*/_react.default.createElement("i", null, "".concat(props.startIcon ? /*#__PURE__*/_react.default.createElement(_icons.default, {
     name: props.startIcon
-  }) : ''), /*#__PURE__*/_react.default.createElement("i", null, "$", props.endIcon ? /*#__PURE__*/_react.default.createElement(_icons.default, {
+  }) : '')), /*#__PURE__*/_react.default.createElement("i", null, "".concat(props.endIcon ? /*#__PURE__*/_react.default.createElement(_icons.default, {
     name: props.endIcon,
     align: "right"
-  }) : ''), /*#__PURE__*/_react.default.createElement("input", {
+  }) : '')), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     className: classes,
     placeholder: "placeholder",
@@ -28501,7 +28501,7 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
-    startIcon: "phone.svg"
+    startIcon: "phone"
   }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
@@ -28521,8 +28521,8 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input size=\"md\"/>"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
     size: "md"
   }, /*#__PURE__*/_react.default.createElement("label", null, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "wrapper"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))));
+    className: "wrapper textarea"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input multilines />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))));
 }
 
 var _default = App;
@@ -28567,7 +28567,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50278" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57207" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -10,12 +10,17 @@ body {
   padding-block-end: 18px;
   padding-inline-start: 12px;
   padding-inline-end: 108px;
+  outline: none;
 }
 
 svg {
   display: block;
   width: 48px;
   height: 48px;
+}
+
+i {
+  position: absolute;
 }
 
 .input:hover {
@@ -89,6 +94,14 @@ fieldset {
 .text .inputContainer {
   display: flex;
   flex-direction: column;
+}
+
+.textarea .inputContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+  margin-right: 2px;
+  min-height: 200px;
 }
 
 

@@ -5,7 +5,6 @@ function InputComponent(props) {
   const label = props.label || props.children;
   const helpertext = props.helpertext && 'true';
   let classes = props.value ? `input input--${props.value}` : "input";
-
   if(props.error) {
     classes = `${classes} input--error`;
   }
@@ -23,9 +22,8 @@ function InputComponent(props) {
           <fieldset>
             <label>{label}</label>
             <div className="inputContainer">
-              <i>${props.startIcon ? <Icon name={props.startIcon} /> : ''}</i>
-              <i>${props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}
-              </i>
+              <i>{`${props.startIcon ? <Icon name={props.startIcon} /> : ''}`}</i>
+              <i>{`${props.endIcon ? <Icon name={props.endIcon} align="right" /> : ''}`}</i>
               <input type="text"
                     className={classes}
                     placeholder="placeholder"

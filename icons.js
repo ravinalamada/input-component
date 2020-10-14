@@ -10,7 +10,8 @@ import LoginIcon from "./assests/login.svg";
 
 const Icon = props => {
   let icon;
-  let style = props.align == "right" ? "icon--right" : null;
+  let style = props.align === "right" ? "icon--right" : null;
+
   switch(props.name) {
     case 'search':
       icon = <img src={SearchIcon} className={style} />;

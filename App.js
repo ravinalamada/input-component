@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import InputComponent from "./InputComponent"
+import InputComponent from "./InputComponent";
 
 function App() {
 
@@ -49,7 +49,7 @@ function App() {
       <div className="container">
         <div className="wrapper">
           <span>{`<input />`}</span>
-          <InputComponent startIcon="phone.svg">
+          <InputComponent startIcon="phone">
             <label>Label</label>
           </InputComponent>
         </div>
@@ -80,9 +80,9 @@ function App() {
           </InputComponent>
         </div>
       </div>
-      <div className="wrapper">
-        <span>{`<input />`}</span>
-        <InputComponent >
+      <div className="wrapper textarea">
+        <span>{`<input multilines />`}</span>
+        <InputComponent>
           <label>Label</label>
         </InputComponent>
       </div>
