@@ -2,6 +2,10 @@ body {
   color: #828282;
 }
 
+header {
+  text-align: center;
+}
+
 .input {
   border: 1px solid #828282;
   box-sizing: border-box;
@@ -41,6 +45,7 @@ fieldset {
   border: 1px solid #D32F2F;
 }
 
+label + .input--HelperText + span,
 .label {
   color: #D32F2F;
 }
@@ -120,6 +125,14 @@ fieldset {
   position: relative;
   top: 36px;
   left: 122px;
+}
+
+@media (min-width: 900px) {
+  main {
+    max-width: 800px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
 }
 
 

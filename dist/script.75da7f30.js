@@ -28426,7 +28426,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function InputComponent(props) {
   var label = props.label || props.children;
-  var helpertext = props.helpertext && 'true';
+  var helpertext;
   var classes = props.value ? "input input--".concat(props.value) : "input";
 
   if (props.error) {
@@ -28441,8 +28441,9 @@ function InputComponent(props) {
     classes = "".concat(classes, " input--fullWidth");
   }
 
-  if (props.row) {
-    classes = "".concat(classes, " input--row");
+  if (props.HelperText) {
+    helpertext = /*#__PURE__*/_react.default.createElement("span", null, props.HelperText);
+    classes = "".concat(classes, " input--HelperText");
   }
 
   return /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, label), /*#__PURE__*/_react.default.createElement("div", {
@@ -28470,7 +28471,7 @@ function InputComponent(props) {
     placeholder: "placeholder",
     disabled: props.disabled,
     defaultValue: props.value
-  })));
+  })), helpertext);
 }
 
 var _default = InputComponent;
@@ -28492,7 +28493,7 @@ var _InputComponent = _interopRequireDefault(require("./InputComponent"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Input component")), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
@@ -28508,17 +28509,16 @@ function App() {
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label")), /*#__PURE__*/_react.default.createElement("span", {
-    helpertext: "true"
-  }, "Some intersting text")), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    HelperText: "Some intersting text"
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" error />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
+    HelperText: "Some intersting text",
     error: true
   }, /*#__PURE__*/_react.default.createElement("label", {
     className: "label"
-  }, "Label")), /*#__PURE__*/_react.default.createElement("span", {
-    helpertext: "true"
-  }, "Some intersting text"))), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input value=\"Text\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
     value: "Text"
@@ -28548,7 +28548,7 @@ function App() {
     size: "md"
   }, /*#__PURE__*/_react.default.createElement("label", null, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper textarea"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "<input multilines />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label"))));
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input multilines />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label")))));
 }
 
 var _default = App;
@@ -28593,7 +28593,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50301" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

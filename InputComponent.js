@@ -3,7 +3,7 @@ import Icon from "./icons"
 
 function InputComponent(props) {
   const label = props.label || props.children;
-  const helpertext = props.helpertext && 'true';
+  let helpertext;
   let classes = props.value ? `input input--${props.value}` : "input";
   if(props.error) {
     classes = `${classes} input--error`;
@@ -14,8 +14,9 @@ function InputComponent(props) {
   if(props.fullWidth) {
     classes = `${classes} input--fullWidth`
   }
-  if(props.row) {
-    classes = `${classes} input--row`
+  if(props.HelperText){
+    helpertext = <span>{props.HelperText}</span>
+    classes = `${classes} input--HelperText`;
   }
 
   return (
@@ -51,10 +52,9 @@ function InputComponent(props) {
                     disabled={props.disabled}
                     defaultValue={props.value}
               />}
-            {/* <helperText></helperText> */}
             </div>
+            {helpertext}
           </fieldset>
-
   )
 
 }
