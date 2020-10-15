@@ -7,6 +7,11 @@ header {
   text-align: center;
 }
 
+main {
+  background-color: bisque;
+  padding: 32px;
+}
+
 .input {
   border: 1px solid #828282;
   box-sizing: border-box;
@@ -99,7 +104,8 @@ fieldset {
   padding-inline-end: 76px;
 }
 
-.phone fieldset {
+.phone fieldset,
+.lock fieldset {
   padding: 0;
   margin: 0;
 }
