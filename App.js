@@ -35,7 +35,7 @@ function App() {
               <label>Label</label>
             </InputComponent>
           </div>
-          <div className="wrapper">
+          <div className="wrapper HelperTextError">
             <span>{`<input helpertext="Some intersting text" error />`}</span>
             <InputComponent HelperText="Some intersting text" error>
               <label className="label">Label</label>

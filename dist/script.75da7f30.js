@@ -28512,7 +28512,7 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
     HelperText: "Some intersting text"
   }, /*#__PURE__*/_react.default.createElement("label", null, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "wrapper"
+    className: "wrapper HelperTextError"
   }, /*#__PURE__*/_react.default.createElement("span", null, "<input helpertext=\"Some intersting text\" error />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, {
     HelperText: "Some intersting text",
     error: true
@@ -28593,7 +28593,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50301" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52244" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
