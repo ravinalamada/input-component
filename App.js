@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputComponent from "./InputComponent";
+import Textarea from "./TextareaComponent"
 
 function App() {
 
@@ -84,9 +85,9 @@ function App() {
         </div>
         <div className="wrapper textarea">
           <span>{`<input multilines />`}</span>
-          <InputComponent>
+          <Textarea rows="4">
             <label>Label</label>
-          </InputComponent>
+          </Textarea>
         </div>
       </form>
     </main>

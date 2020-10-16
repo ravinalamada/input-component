@@ -28476,7 +28476,22 @@ function InputComponent(props) {
 
 var _default = InputComponent;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./icons":"icons.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./icons":"icons.js"}],"TextareaComponent.js":[function(require,module,exports) {
+// import React from 'react';
+// function Textarea({ row = 1 }, props) {
+//     let row;
+//     let TextareaRow = props.multline ? { rows={ row } } : row;
+//     return (
+//         <textarea
+//             type="text"
+//             placeholder="placeholder"
+//             rows={TextareaRow}
+//         >
+//         </textarea>
+//     )
+// }
+// export default Textarea;
+},{}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28489,6 +28504,8 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _InputComponent = _interopRequireDefault(require("./InputComponent"));
+
+var _TextareaComponent = _interopRequireDefault(require("./TextareaComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28548,12 +28565,14 @@ function App() {
     size: "md"
   }, /*#__PURE__*/_react.default.createElement("label", null, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "wrapper textarea"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "<input multilines />"), /*#__PURE__*/_react.default.createElement(_InputComponent.default, null, /*#__PURE__*/_react.default.createElement("label", null, "Label")))));
+  }, /*#__PURE__*/_react.default.createElement("span", null, "<input multilines />"), /*#__PURE__*/_react.default.createElement(_TextareaComponent.default, {
+    rows: "4"
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Label")))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./InputComponent":"InputComponent.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./InputComponent":"InputComponent.js","./TextareaComponent":"TextareaComponent.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28593,7 +28612,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53863" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50389" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

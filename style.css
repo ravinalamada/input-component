@@ -85,6 +85,17 @@ fieldset {
   flex-direction: column;
 }
 
+.textarea {
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+}
+
+textarea {
+  border-radius: 8px;
+  resize: none;
+}
+
 .textarea input {
   display: flex;
   flex-direction: row;
